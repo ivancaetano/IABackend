@@ -17,7 +17,7 @@ namespace IACarros.Controllers
         private CARDB db = new CARDB();
 
         // GET api/Carro
-        public IQueryable<cartb004_versao> Getcartb004_versao()
+        public IQueryable<cartb004_versao> Getcartb004_versao(dynamic dialog)
         {
             Dictionary<string, string> parametros = ControllerContext.Request.GetQueryNameValuePairs().ToDictionary(x => x.Key, x => x.Value);
             string importante = GetValue(parametros, "importante");
